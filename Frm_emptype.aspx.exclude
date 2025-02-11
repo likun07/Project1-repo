@@ -1,0 +1,91 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Frm_emptype.aspx.cs" Inherits="Frm_emptype" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            height: 35px;
+        }
+        .style3
+        {
+            height: 43px;
+        }
+    </style>
+   <script language="javascript">
+       function validateform() {
+           if (document.getElementById("ctl00_ContentPlaceHolder1_txt_emptype").value == "") {
+               alert("Please Enter Employee Type");
+               return false;
+           }
+           else {
+               return true;
+           }
+
+       }
+    </script>
+    
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <table bgcolor="#FF5050" class="style1">
+        <tr>
+            <td align="center" class="style3" colspan="2">
+                <asp:Label ID="Label1" runat="server" Font-Size="X-Large" ForeColor="#99CC00" 
+                    Text="Employee Type Entry Form"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                Employee&nbsp; Type :</td>
+            <td class="style2">
+                <asp:TextBox ID="txt_emptype" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td class="style2">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2">
+                <asp:Button ID="btn_save" runat="server" Text="Save" onclick="btn_save_Click"  OnClientClick="return validateform();"/>
+                <asp:Button ID="btn_update" runat="server" Text="Update" 
+                    onclick="btn_update_Click" OnClientClick="return validateform();" />
+                <asp:Button ID="btn_refresh" runat="server" Text="Refresh" 
+                    onclick="btn_refresh_Click" />
+                <asp:HiddenField ID="HiddenField1" runat="server" />
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2">
+                <asp:GridView ID="GridView1" runat="server" BackColor="#DEBA84" 
+                    BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
+                    CellSpacing="2" AutoGenerateColumns="False" 
+                    onrowdeleting="GridView1_RowDeleting" 
+                    onrowupdating="GridView1_RowUpdating" 
+                    onselectedindexchanged="GridView1_SelectedIndexChanged">
+                    <Columns>
+                        <asp:BoundField DataField="TypeId" HeaderText="Employee Type Id" />
+                        <asp:BoundField DataField="Type_Name" HeaderText="Type Name" />
+                        <asp:ButtonField CommandName="Update" HeaderText="Edit" Text="Edit" />
+                        <asp:ButtonField Text="Delete" HeaderText="Delete" CommandName="Delete" />
+                    </Columns>
+                    <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+                    <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+                    <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#FFF1D4" />
+                    <SortedAscendingHeaderStyle BackColor="#B95C30" />
+                    <SortedDescendingCellStyle BackColor="#F1E5CE" />
+                    <SortedDescendingHeaderStyle BackColor="#93451F" />
+                </asp:GridView>
+            </td>
+        </tr>
+    </table>
+</asp:Content>
+

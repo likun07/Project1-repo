@@ -1,0 +1,62 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>About Us</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="width:1000px; margin:auto;">
+		<div class="flt tp_mbg">
+			<span class="flt tp_01">
+				<a href="home.html" class="flt" style="color:#FFFFFF; margin:25px 0px 0px 35px; text-decoration:none;">HOME</a>
+			</span>
+			<a href="Frm_Registration.aspx" class="flt" style="color:#FFFFFF; margin:49px 0px 0px 32px; text-decoration:none;">Employee Register</a>
+			<a href="Login.aspx" class="flt" style="color:#FFFFFF; margin:49px 0px 0px 50px; text-decoration:none;">Login</a>
+			<%--<a href="#" class="flt" style="color:#FFFFFF; margin:49px 0px 0px 53px; text-decoration:none;">SCHEMES</a>
+			<a href="#" class="flt" style="color:#FFFFFF; margin:49px 0px 0px 45px; text-decoration:none;">CONTACT US</a>
+			<a href="#" class="flt" style="color:#FFFFFF; margin:49px 0px 0px 42px; text-decoration:none;">ABOUT US </a> --%>
+			<span class="flt" style="background-color:#000000; width:164px; height:49px; margin-left:160px;">
+				<a href="#"><img src="images/tp_img1.gif" alt=" " width="11" height="11" class="flt tp_img1" /></a>
+				<a href="#"><img src="images/tp_img2.gif" alt=" " width="11" height="9" class="flt tp_img2" /></a>
+				<a href="#"><img src="images/tp_img3.gif" alt=" " width="11" height="11" class="flt tp_img3" /></a>
+			</span>
+		</div>
+		<span class="flt tp_bg1">
+			<a href="Home.html"><img src="images/tp_logo.jpg" alt=" " width="283" height="38" class="flt tp_logo" /></a>
+		</span>
+		<span class="flt tp_bg2"></span>
+	    <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+	</div>
+									<!--TOP ENDS HERE-->
+	<div style="width:1000px; margin:auto;">
+									<!--CENTER STARTS HERE-->
+		<div class="flt" style="width:485px; background-color:#FFFFFF; margin-left:27px;">
+			 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                 <p>
+                     <br />
+                 </p>
+                 <p>
+                 </p>
+        
+        </asp:ContentPlaceHolder>
+			
+		</div>
+		<a href="#"><img src="images/rp_market.jpg" alt=" " width="276" height="162" class="flt rp_market" /></a>
+	</div>
+									<!--RIGHT ENDS HERE-->
+									<!--FOOTER STARTS HERE-->
+	<div style="width:1000px; margin:auto;">
+		<span class="flt" style="color:#FFFFFF; margin:16px 0px 0px 196px; font:11px/14px tahoma; padding-bottom:19px;"><a href="http://www.buytemplates.net/CSS-XHTML-web-templates.aspx" style="color:#FFFFFF;">C</a>opy 
+        right reserved to abacus sytem pvt Ltd</span>
+	</div>
+    </form>
+</body>
+</html>

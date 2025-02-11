@@ -1,0 +1,128 @@
+﻿<%@ Page Language="C#" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+  
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+    </div>
+    <table align="center" bgcolor="#FF33CC">
+        <tr>
+            <td bgcolor="#FF33CC" class="style8">
+                FirstName</td>
+            <td class="style7">
+                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="style8">
+                LastName</td>
+            <td class="style7">
+                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr> <td class="style8">
+                D.O.B</td>
+            <td class="style7"> 
+                <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+                
+            </td></tr>
+            <tr> <td class="style8">
+            Gender</td>
+            <td class="style7" align="left">
+                
+                <asp:RadioButtonList ID="RadioButtonList1" runat="server" 
+                    RepeatDirection="Horizontal">
+                    <asp:ListItem>Male</asp:ListItem>
+                    <asp:ListItem>Female</asp:ListItem>
+                </asp:RadioButtonList>
+            </td></tr>
+        <tr>
+            <td class="style8">
+                User_Id</td>
+            <td class="style7">
+                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="style8">
+                Password</td>
+            <td class="style7">
+                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="style8">
+                Confirm Pasword</td>
+            <td class="style7">
+                <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="style8">
+                Email_Id</td>
+            <td class="style7">
+                <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="style8">
+                Security Question</td>
+            <td class="style7">
+                <asp:DropDownList ID="DropDownList3" runat="server">
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
+            <td class="style8">
+                Security Answer</td>
+            <td class="style7">
+                <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="style8">
+                EmpType</td>
+            <td class="style7">
+                <asp:DropDownList ID="DropDownList1" runat="server">
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
+            <td class="style8">
+                Contact No.</td>
+            <td class="style7">
+                <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="style8">
+                &nbsp;</td>
+            <td class="style7">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <asp:Button ID="btn_submit" runat="server" Text="Submit" Width="164px" />
+                <asp:Button ID="btn_cancel" runat="server" style="margin-left: 69px" 
+                    Text="Cancel" Width="161px" />
+            </td>
+        </tr>
+    </table>
+    </form>
+    </body>
+</html>
